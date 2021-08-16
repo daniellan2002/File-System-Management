@@ -13,6 +13,12 @@ def partA_run(files_considered:list):
         Runs the first part of the program to search for
         files under Consideration
     '''
+    print('''
+    Please type "R" for recursive search;
+
+    or
+
+    "D" for directory search, folowed by your preferred directory URL: \n''')
 
     #Takes Input
     user_input = input()
@@ -140,6 +146,36 @@ def partB_run(files_considered:list, interesting_files:list):
         files that are interesting
     '''
 
+    print('''
+    To further select your files, here are the options:
+
+    Type the capitalized letter:
+
+        "A" if you want to select all the files;
+
+
+        "N" followed by a space and the name of the file if you wish to
+        search the file by name;
+
+
+        "E" followed by a dot or space and the name of the extension
+        (E.py or E py)
+
+
+        "T" followed by a string of texts you are looking for in a text file;
+        (T hello or T Good Morning)
+
+
+        "<" followed by the size of the file in bytes for any file that's less
+        than the given size;
+
+
+        ">" followed by the size of the file in bytes for any file that's greater
+        than the given size;
+
+    \n
+    ''')
+        
     user_input_B = input()
 
     valid = valid_input_B(user_input_B)
@@ -372,6 +408,20 @@ def partC_run(interesting_files:list):
         Runs the third part of the program to take actions
         on the files that are interesting
     '''
+
+    print('''
+    Finally, type:
+
+        "T", if you have selected a text file and wishes to print out its first line.
+
+        (WARNING: If you have not selected any text file, the program will terminate)
+
+        "D", if you wish to duplicate the files you have selected with an
+        extension name ".dup";
+
+        \n
+        ''')
+    
     user_input_C = input()
 
     valid = valid_input_C(user_input_C)
